@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Post Details{% endblock %}
+{% block content %}
+
+<ul>
+    <li>
+        {{ post.title}}<br>
+        <text>Author: </text>  {{ post.author}}
+        <br> Status: {{ post.status}}
+        <br> created on: {{ post.created_on}}<br>
+        
+        <p>{{ post.body }}</p>
+        <div style="text-align: center;">
+            <img src={{Post.image}} alt="image" width="200" height="200">
+        </div>
+
+    </li>
+</ul>
+
+{% endblock %}
