@@ -11,7 +11,9 @@
         
         <p>{{ post.body }}</p>
         <div style="text-align: center;">
-            <img src={{Post.image}} alt="image" width="200" height="200">
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="image" width="300" height="300">
+            {% endif %} 
         </div>
 
     </li>
