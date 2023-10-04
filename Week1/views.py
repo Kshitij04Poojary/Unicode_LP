@@ -51,13 +51,13 @@ def login_request(request):
 class AddPostView(CreateView):
 	model=Post
 	template_name='createblog.html'
-	fields=['title','author','body']
+	fields=['title','author','body','image']
 	success_url=reverse_lazy('home')
 
 class UpdatePostView(UpdateView):
 	model=Post
 	template_name='updatepost.html'
-	fields=['title','author','body']
+	fields=['title','author','body','image']
 	success_url=reverse_lazy('home')
 
 class DeletePostView(DeleteView):
